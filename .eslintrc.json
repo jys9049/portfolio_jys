@@ -23,8 +23,12 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }],
     "@typescript-eslint/camelcase": "off",
-    "import/extensions": ["error", "ignorePackages"],
-    "no-console": "error"
+    "import/extensions": "off",
+    "no-console": "error",
+    "no-restricted-exports": [
+      "error",
+      { "restrictDefaultExports": { "defaultFrom": false } }
+    ]
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

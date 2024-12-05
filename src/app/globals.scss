@@ -88,7 +88,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -128,6 +127,33 @@ table {
   border-spacing: 0;
 }
 
+// 공통 스타일
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+// Light Mode
+body[data-theme='light-mode'] {
+  --background: #ffffff;
+  --text: #121212;
+  --sub-text: #6d6d6d;
+  --point: #0073e6;
+  --button: #ff7f50;
   background-color: var(--background);
+  color: var(--text);
+}
+
+// Dark Mode
+body[data-theme='dark-mode'] {
+  --background: #121212;
+  --text: #e0e0e0;
+  --sub-text: #9e9e9e;
+  --point: #1f6feb;
+  --button: #ff9900;
+  background-color: var(--background);
+  color: var(--text);
 }

@@ -1,10 +1,19 @@
+import Header from '@/components/Header';
+import Line from '@/components/Line';
+import Information from '@/components/Information';
+
 import styles from './page.module.scss';
+import Skill from '@/components/Skill';
+import ThemeButton from '@/components/ThemeButton';
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <p className={styles.title}>안녕하세요</p>
-      <p className={styles.subTitle}>반갑습니다</p>
+      <ThemeButton />
+      <Header />
+      <Information />
+      <Line />
+      <Skill />
     </div>
   );
 }

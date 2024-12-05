@@ -1,0 +1,27 @@
+// Dark Mode Colors
+$background: #121212;
+$point: #1f6feb;
+$text: #e0e0e0;
+$sub-text: #9e9e9e;
+$button: #ff9900;
+
+// Light Mode Colors
+$background-light: #ffffff;
+$point-light: #0073e6;
+$text-light: #121212;
+$sub-text-light: #6d6d6d;
+$button-light: #ff7f50;
+
+:root {
+  --background: #{$background};
+  --point: #{$point};
+  --text: #{$text};
+  --sub-text: #{$sub-text};
+  --button: #{$button};
+
+  --background-light: #{$background-light};
+  --point-light: #{$point-light};
+  --text-light: #{$text-light};
+  --sub-light-text: #{$sub-text-light};
+  --button-light: #{$button-light};
+}
