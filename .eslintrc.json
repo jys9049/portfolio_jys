@@ -28,6 +28,10 @@
     "no-restricted-exports": [
       "error",
       { "restrictDefaultExports": { "defaultFrom": false } }
+    ],
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": ["arrow-function", "function-declaration"] }
     ]
   },
   "parser": "@typescript-eslint/parser",
