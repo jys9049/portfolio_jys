@@ -16,7 +16,7 @@ const ThemeContext = createContext({
   handleThemeChange: () => {},
 });
 
-export const ThemeProvider = ({ children }: PropsWithChildren) => {
+export function ThemeProvider({ children }: PropsWithChildren) {
   const [theme, setTheme] = useState('light-mode');
 
   const handleThemeChange = () => {
@@ -35,17 +35,15 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
   }, [theme]);
 
   return (
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <ThemeContext.Provider value={{ theme, handleThemeChange }}>
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
 
   return context;
 };

@@ -1,15 +1,18 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { ReactComponent as DarkIcon } from '@/assets/dark-mode.svg';
-import { ReactComponent as LightIcon } from '@/assets/light-mode.svg';
-import styles from './ThemeButton.module.scss';
+
+import DarkIcon from '@/assets/dark-mode.svg';
+import LightIcon from '@/assets/light-mode.svg';
+
 import { useTheme } from '@/context/ThemeContext';
-import { useIsMobile } from '@/hooks/useResponsive/useResponsive';
+import { useResponsive } from '@/hooks/useResponsive/useResponsive';
+
+import styles from './ThemeButton.module.scss';
 
 function ThemeButton() {
   const { theme, handleThemeChange } = useTheme();
-  const isMobile = useIsMobile();
+  const { isMobile } = useResponsive();
 
   const [size, setSize] = useState(24);
 
@@ -22,7 +25,11 @@ function ThemeButton() {
   }, [isMobile]);
 
   return (
-    <button onClick={handleThemeChange} className={styles.themeButton}>
+    <button
+      data-testid="toggle-theme"
+      onClick={handleThemeChange}
+      className={styles.themeButton}
+    >
       {theme === 'light-mode' ? (
         <DarkIcon width={size} height={size} />
       ) : (

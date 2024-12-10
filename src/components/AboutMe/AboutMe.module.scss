@@ -1,0 +1,85 @@
+@import '@/styles/_mixin';
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 25%;
+  height: 54px;
+}
+
+.mainText {
+  font-size: 18px;
+  color: var(--sub-text);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--highlight);
+}
+
+.subText {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.linkText {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  gap: 8px;
+}
+
+.linkWrap {
+  display: flex;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+@include tablet {
+  .textWrap {
+    gap: 8px;
+  }
+  .mainText {
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+  .subText {
+    font-size: 14px;
+  }
+  .linkText {
+    font-size: 12px;
+  }
+}
+
+@include mobile {
+  .textWrap {
+    gap: 6px;
+  }
+  .linkContainer {
+    gap: 6px;
+  }
+  .mainText {
+    font-size: 10px;
+    padding-bottom: 6px;
+  }
+  .subText {
+    font-size: 10px;
+  }
+  .linkText {
+    font-size: 10px;
+  }
+}

@@ -1,10 +1,11 @@
 import Header from '@/components/Header';
-import Line from '@/components/Line';
 import Information from '@/components/Information';
-
-import styles from './page.module.scss';
 import Skill from '@/components/Skill';
 import ThemeButton from '@/components/ThemeButton';
+import Education from '@/components/Education/Education';
+import AboutMe from '@/components/AboutMe/AboutMe';
+
+import styles from './page.module.scss';
 
 export default function Home() {
   return (
@@ -12,8 +13,11 @@ export default function Home() {
       <ThemeButton />
       <Header />
       <Information />
-      <Line />
-      <Skill />
+      <div className={styles.contents}>
+        <AboutMe />
+        <Skill />
+        <Education />
+      </div>
     </div>
   );
 }

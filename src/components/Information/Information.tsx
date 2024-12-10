@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import styles from './Information.module.scss';
+import { useResponsive } from '@/hooks/useResponsive/useResponsive';
 import { mobileText, defaultText } from './const';
-
-import { useIsMobile } from '@/hooks/useResponsive/useResponsive';
+import styles from './Information.module.scss';
 
 function Information() {
-  const isMobile = useIsMobile();
+  const { isMobile } = useResponsive();
 
   const [text, setText] = useState<string[]>(defaultText);
 
@@ -21,8 +20,8 @@ function Information() {
 
   return (
     <div className={styles.container}>
-      {text.map((item, idx) => (
-        <p className={styles.text} key={idx}>
+      {text.map((item) => (
+        <p className={styles.text} key={item}>
           {item}
         </p>
       ))}
