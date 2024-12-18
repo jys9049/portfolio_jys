@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from './Header.module.scss';
+import Modal from '../Modal/Modal';
 
 function Header() {
   return (

@@ -139,7 +139,9 @@ body {
 // Light Mode
 body[data-theme='light-mode'] {
   --background: #ffffff;
+  --background-reverse: #121212;
   --text: #121212;
+  --text-reverse: #ffffff;
   --sub-text: #6d6d6d;
   --point: #0073e6;
   --button: #ff7f50;
@@ -150,7 +152,9 @@ body[data-theme='light-mode'] {
 // Dark Mode
 body[data-theme='dark-mode'] {
   --background: #121212;
+  --background-reverse: #ffffff;
   --text: #e0e0e0;
+  --text-reverse: #121212;
   --sub-text: #9e9e9e;
   --point: #1f6feb;
   --button: #ff9900;

@@ -6,13 +6,13 @@ import DarkIcon from '@/assets/dark-mode.svg';
 import LightIcon from '@/assets/light-mode.svg';
 
 import { useTheme } from '@/context/ThemeContext';
-import { useIsMobile } from '@/hooks/useResponsive/useResponsive';
+import { useResponsive } from '@/hooks/useResponsive/useResponsive';
 
 import styles from './ThemeButton.module.scss';
 
 function ThemeButton() {
   const { theme, handleThemeChange } = useTheme();
-  const isMobile = useIsMobile();
+  const { isMobile } = useResponsive();
 
   const [size, setSize] = useState(24);
 
@@ -26,7 +26,7 @@ function ThemeButton() {
 
   return (
     <button
-      type="submit"
+      data-testid="toggle-theme"
       onClick={handleThemeChange}
       className={styles.themeButton}
     >

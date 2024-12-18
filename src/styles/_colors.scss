@@ -1,5 +1,6 @@
 // Dark Mode Colors
 $background: #121212;
+$background-reverse: #ffffff;
 $point: #1f6feb;
 $text: #e0e0e0;
 $sub-text: #9e9e9e;
@@ -7,6 +8,7 @@ $highlight: #ff9900;
 
 // Light Mode Colors
 $background-light: #ffffff;
+$background-reverse-light: #121212;
 $point-light: #0073e6;
 $text-light: #121212;
 $sub-text-light: #6d6d6d;
@@ -14,14 +16,16 @@ $highlight-light: #ff7f50;
 
 :root {
   --background: #{$background};
+  --background-reverse: #{$background-reverse};
   --point: #{$point};
   --text: #{$text};
   --sub-text: #{$sub-text};
   --highlight: #{$highlight};
 
   --background-light: #{$background-light};
+  --background-reverse-light: #{$background-reverse-light};
   --point-light: #{$point-light};
   --text-light: #{$text-light};
-  --sub-light-text: #{$sub-text-light};
+  --sub-text-light: #{$sub-text-light};
   --highlight-light: #{$highlight-light};
 }

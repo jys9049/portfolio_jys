@@ -10,8 +10,11 @@
 
 .skillContainer {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .skill {
@@ -21,6 +24,7 @@
   width: 33.3%;
   gap: 24px;
   box-sizing: border-box;
+  padding: 4px 0;
 }
 
 .sideLine {
@@ -41,6 +45,7 @@
 .skillTextWrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 

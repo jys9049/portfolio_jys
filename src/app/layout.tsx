@@ -25,6 +25,7 @@ export default function RootLayout({
       <ThemeProvider>
         <body data-theme="light-mode" className={`${roboto.className}`}>
           {children}
+          <div id="modal"></div>
         </body>
       </ThemeProvider>
     </html>

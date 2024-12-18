@@ -7,6 +7,3 @@ export const useResponsive = () => {
 
   return { isMobile, isTablet, isLaptop };
 };
-
-export const useIsMobile = () => useMediaQuery({ query: '(max-width:720px)' });
-export const useIsTablet = () => useMediaQuery({ query: '(max-width:1024px)' });

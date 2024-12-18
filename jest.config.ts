@@ -18,7 +18,7 @@ const config: Config = {
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '^.+\\.(svg)$': '<rootDir>/src/__mocks__/svg.js',
+    '^.+\\.(svg)$': '<rootDir>/__mocks__/svg.js',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
