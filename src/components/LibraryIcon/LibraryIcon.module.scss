@@ -1,0 +1,52 @@
+@import '@/styles/_mixin';
+
+.container {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  padding: 4px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &:hover {
+    .title {
+      display: block;
+      z-index: 2;
+    }
+  }
+}
+
+.title {
+  display: none;
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 4px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sub-text);
+  color: var(--text-reverse);
+}
+
+@include tablet {
+  .container {
+    width: 48px;
+    height: 48px;
+  }
+  .title {
+    font-size: 12px;
+    bottom: -20px;
+  }
+}
+
+@include mobile {
+  .container {
+    width: 28px;
+    height: 28px;
+  }
+  .title {
+    font-size: 8px;
+    bottom: -15px;
+  }
+}
