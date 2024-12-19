@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.scss';
-import '@/styles/_variables.scss';
+import '@/styles/_colors.scss';
+import { Roboto } from 'next/font/google';
+import { ThemeProvider } from '@/context/ThemeContext';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeProvider>
+        <body data-theme="light-mode" className={`${roboto.className}`}>
+          {children}
+          <div id="modal"></div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
