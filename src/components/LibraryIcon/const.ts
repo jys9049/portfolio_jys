@@ -10,6 +10,9 @@ import Mui from '@/assets/material-ui-1.svg';
 import React from '@/assets/react-2.svg';
 import Slack from '@/assets/slack-new-logo.svg';
 import Storybook from '@/assets/storybook.svg';
+import I18Next from '@/assets/i18next-icon.svg';
+import StyleX from '@/assets/stylex-logo-small.svg';
+import Ky from '@/assets/ky.svg';
 
 import { EIconTitle } from './LibraryIcon.types';
 
@@ -22,6 +25,9 @@ export const ICONS = [
   { key: EIconTitle.STORYBOOK, icon: Storybook, name: 'Storybook' },
   { key: EIconTitle.SASS, icon: Sass, name: 'Sass' },
   { key: EIconTitle.MUI, icon: Mui, name: 'Mui' },
+  { key: EIconTitle.STYLEX, icon: StyleX, name: 'StyleX' },
+  { key: EIconTitle.I18NEXT, icon: I18Next, name: 'i18next' },
+  { key: EIconTitle.KY, icon: Ky, name: 'ky' },
   { key: EIconTitle.BITBUCKET, icon: Bitbucket, name: 'Bitbucket' },
   { key: EIconTitle.GITHUB, icon: Github, name: 'Github' },
   { key: EIconTitle.FIGMA, icon: Figma, name: 'Figma' },
