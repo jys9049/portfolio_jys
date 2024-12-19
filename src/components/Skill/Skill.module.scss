@@ -1,0 +1,108 @@
+@import '@/styles/_mixin';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.skillContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+  gap: 24px;
+  box-sizing: border-box;
+  padding: 4px 0;
+}
+
+.sideLine {
+  border-left: 2px solid var(--sub-text);
+  border-right: 2px solid var(--sub-text);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--highlight);
+}
+
+.skillText {
+  font-size: 18px;
+}
+
+.skillTextWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@include laptop {
+  .title {
+    font-size: 30px;
+  }
+  .skillText {
+    font-size: 16px;
+  }
+  .skillContainer {
+    width: 80%;
+  }
+  .skillTextWrap {
+    gap: 12px;
+  }
+}
+
+@include tablet {
+  .title {
+    font-size: 18px;
+  }
+  .skillText {
+    font-size: 14px;
+  }
+  .skillTextWrap {
+    gap: 10px;
+  }
+  .skillContainer {
+    width: 90%;
+  }
+}
+
+@include mobile {
+  .title {
+    font-size: 12px;
+  }
+  .container {
+    gap: 12px;
+  }
+  .skill {
+    width: 100%;
+    gap: 12px;
+  }
+  .skillContainer {
+    width: 90%;
+  }
+  .skillText {
+    font-size: 10px;
+  }
+  .skillContainer {
+    // flex-direction: column;
+  }
+  .sideLine {
+    border-left: none;
+    border-right: none;
+    // border-top: 2px solid var(--sub-text);
+    // border-bottom: 2px solid var(--sub-text);
+  }
+}
