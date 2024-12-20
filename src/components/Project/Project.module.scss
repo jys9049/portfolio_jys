@@ -1,0 +1,28 @@
+.projectContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid var(--sub-text);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.contentsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ellipsis {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

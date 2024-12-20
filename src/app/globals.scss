@@ -1,3 +1,5 @@
+@import '../styles/colors';
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -138,26 +140,30 @@ body {
 
 // Light Mode
 body[data-theme='light-mode'] {
-  --background: #ffffff;
-  --background-reverse: #121212;
-  --text: #121212;
-  --text-reverse: #ffffff;
-  --sub-text: #6d6d6d;
-  --point: #0073e6;
-  --button: #ff7f50;
+  --background: #{$background-light};
+  --background-reverse: #{$background-reverse-light};
+  --point: #{$point-light};
+  --text: #{$text-light};
+  --sub-text: #{$sub-text-light};
+  --highlight: #{$highlight-light};
+  --accent: #{$accent-light};
+  --success: #{$success-light};
+  --warning: #{$warning-light};
   background-color: var(--background);
   color: var(--text);
 }
 
 // Dark Mode
 body[data-theme='dark-mode'] {
-  --background: #121212;
-  --background-reverse: #ffffff;
-  --text: #e0e0e0;
-  --text-reverse: #121212;
-  --sub-text: #9e9e9e;
-  --point: #1f6feb;
-  --button: #ff9900;
+  --background: #{$background};
+  --background-reverse: #{$background-reverse};
+  --point: #{$point};
+  --text: #{$text};
+  --sub-text: #{$sub-text};
+  --highlight: #{$highlight};
+  --accent: #{$accent};
+  --success: #{$success};
+  --warning: #{$warning};
   background-color: var(--background);
   color: var(--text);
 }
